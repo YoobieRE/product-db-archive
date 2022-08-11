@@ -124539,7 +124539,7 @@
         },
         "game_page_modules": {
           "player_stats": {
-            "size": 1
+            "size": 2
           },
           "friends": {
             "size": 1
@@ -124560,13 +124560,7 @@
               "id": "gameProgression"
             },
             {
-              "id": "Score"
-            },
-            {
               "id": "HighScore"
-            },
-            {
-              "id": "Distance"
             },
             {
               "id": "CoinsEarned"
@@ -124576,33 +124570,6 @@
             },
             {
               "id": "BoostTime"
-            },
-            {
-              "id": "achievement1progression"
-            },
-            {
-              "id": "achievement2progression"
-            },
-            {
-              "id": "achievement3progression"
-            },
-            {
-              "id": "achievement4progression"
-            },
-            {
-              "id": "achievement5progression"
-            },
-            {
-              "id": "achievement6progression"
-            },
-            {
-              "id": "achievement7progression"
-            },
-            {
-              "id": "achievement8progression"
-            },
-            {
-              "id": "achievement9progression"
             }
           ]
         },
