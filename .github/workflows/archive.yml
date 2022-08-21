@@ -1,0 +1,26 @@
+on:
+  schedule:
+    - cron: 0 0 * * 1
+
+name: Archive
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    name: Upload to Internet Archive
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: gdamdam/iagitup
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+          cache: pip
+      - name: Setup iagitup
+        run: |
+          pip install .
+          ia configure -u ${{ secrets.IA_USER }} -p ${{ secrets.IA_PASS }}
+          cp ~/.config/internetarchive/ia.ini ~/.config/ia.ini
+      - name: Upload
+        run: iagitup https://github.com/${{ github.repository }} -m "mediatype:data,subject:GitHub;code;software;git;ubisoft;gaming;database"
